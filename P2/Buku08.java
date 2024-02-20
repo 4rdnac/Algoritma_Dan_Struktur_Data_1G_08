@@ -13,7 +13,9 @@ public class Buku08 {
     }
 
     void terjual(int jml) {
-        stok -= jml;
+        if (stok < jml) {
+            stok -= jml;
+        }
     }
 
     void restock(int jml) {
