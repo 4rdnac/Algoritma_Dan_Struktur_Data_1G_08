@@ -13,7 +13,7 @@ public class Buku08 {
     }
 
     void terjual(int jml) {
-        if (stok < jml) {
+        if (stok >= jml && stok > 0) {
             stok -= jml;
         }
     }
