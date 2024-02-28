@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        PersegiPanjang[] ppArray = new PersegiPanjang[3];
         Scanner sc08 = new Scanner(System.in);
+        System.out.print("Masukkan Panjang Array: ");
+        int lenghtArray=sc08.nextInt();
+        PersegiPanjang[] ppArray = new PersegiPanjang[lenghtArray];
         for (int i = 0; i < ppArray.length; i++) {
             ppArray[i] = new PersegiPanjang();
             System.out.println("Persegi Panjang ke-" + i);
