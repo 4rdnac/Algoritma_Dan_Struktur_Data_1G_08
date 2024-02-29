@@ -10,5 +10,4 @@ public class Main {
             System.out.println("Volume balok ke "+i+": "+blArray[i].hitungVolume());
         }
     }
-
 }
