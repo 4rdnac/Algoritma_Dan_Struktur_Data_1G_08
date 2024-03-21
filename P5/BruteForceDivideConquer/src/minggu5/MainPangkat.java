@@ -17,15 +17,38 @@ public class MainPangkat {
             int pangkat = sc08.nextInt();
             png[i] = new Pangkat(nilai, pangkat);
         }
-        System.out.println("HASIL PANGKAT - BRUTE FORCE");
-        for (int i = 0; i < elemen; i++) {
-            System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
-                    + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
-        }
-        System.out.println("HASIL PANGKAT - DIVIDE AND CONQUER");
-        for (int i = 0; i < elemen; i++) {
-            System.out.println("Hasil " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
-                    + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+        
+        System.out.println("===========================================");
+        System.out.println("                Menu Pangkat               ");
+        System.out.println("========================================== ");
+        System.out.println("1. Menggunakan Brute Force ");
+        System.out.println("2. Menggunakan Devide Conquer ");
+        System.out.println("3. exit ");
+        System.out.print("Silahkan Pilih Metode Perhitungan : ");
+        int pilih = sc08.nextInt();
+
+        switch (pilih) {
+            case 1:
+                System.out.println("============================================");
+                System.out.println("Hasil pangkat menggunakan Brute force ");
+                for (int i = 0; i < png.length; i++) {
+                    System.out.println("Nilai " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
+                            + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            case 2:
+                System.out.println("============================================");
+                System.out.println("Hasil pangkat menggunakan Devide and Conquer ");
+                for (int i = 0; i < png.length; i++) {
+                    System.out.println("Nilai " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
+                            + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            case 3:
+                System.out.println("Terima Kasih");
+                break;
+            default:
+                System.out.println("Input Salah");
         }
         sc08.close();
     }
