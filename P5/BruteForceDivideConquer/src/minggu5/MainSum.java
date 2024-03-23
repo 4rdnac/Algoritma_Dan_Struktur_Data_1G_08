@@ -7,23 +7,27 @@ public class MainSum {
         Scanner sc08 = new Scanner(System.in);
         System.out.println("============================================================");
         System.out.println("Program Menghitung Keuntungan Total(Satuan Juta. Misal 5.9)");
-        System.out.print("Masukkan jumlah bulan : ");
-        int elm = sc08.nextInt();
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int jumlahPerusahaan = sc08.nextInt();
         System.out.println("============================================================");
-        Sum sm = new Sum(elm);
 
-        for (int i = 0; i < sm.elemen; i++) {
-            System.out.print("Masukkan Untung bulan ke - " + (i + 1) + " = ");
-            sm.keuntungan[i] = sc08.nextDouble();
+        for (int p = 0; p < jumlahPerusahaan; p++) {
+            System.out.println("Perusahaan ke-" + (p + 1));
+            System.out.print("Masukkan jumlah bulan: ");
+            int jumlahBulan = sc08.nextInt();
+
+            double[] keuntungan = new double[jumlahBulan];
+            double totalKeuntungan = 0;
+
+            for (int i = 0; i < jumlahBulan; i++) {
+                System.out.print("Masukkan keuntungan bulan ke-" + (i + 1) + ": ");
+                keuntungan[i] = sc08.nextDouble();
+                totalKeuntungan += keuntungan[i];
+            }
+            System.out.println("Total keuntungan perusahaan ke-" + (p + 1) + " selama " + jumlahBulan
+                    + " bulan adalah: " + totalKeuntungan);
+            System.out.println("============================================================");
         }
-        System.out.println("============================================================");
-        System.out.println("Algoritma Brute Force");
-        System.out.println(
-                "Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.TotalBF(sm.keuntungan));
-        System.out.println("============================================================");
-        System.out.println("Algoritma Divide Conquer");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = "
-                + sm.TotalDC(sm.keuntungan, 0, sm.elemen - 1));
         sc08.close();
     }
 }
