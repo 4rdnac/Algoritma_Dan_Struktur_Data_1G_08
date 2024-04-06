@@ -37,4 +37,15 @@ public class PencarianBuku08 {
             System.out.println("data " + x + " tidak ditemukan");
         }
     }
+
+    public Buku08 FindBuku(int cari) {
+        Buku08 indexBuku = null;
+        for (int i = 0; i < listBk.length; i++) {
+            if (listBk[i].kodeBuku == cari) {
+                indexBuku = listBk[i];
+                break;
+            }
+        }
+        return indexBuku;
+    }
 }
