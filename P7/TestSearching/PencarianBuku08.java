@@ -38,14 +38,13 @@ public class PencarianBuku08 {
         }
     }
 
-    public Buku08 FindBuku(int cari) {
-        Buku08 indexBuku = null;
-        for (int i = 0; i < listBk.length; i++) {
-            if (listBk[i].kodeBuku == cari) {
-                indexBuku = listBk[i];
-                break;
-            }
-        }
-        return indexBuku;
+    void TampilData(int x, int pos) {
+        if (pos != -1) {
+            System.out.println("Kode Buku \t: " + x);
+            System.out.println("Judul Buku \t: " + listBk[pos].judulBuku);
+            System.out.println("Tahun Terbit \t: " + listBk[pos].tahunTerbit);
+            System.out.println("Pengarang \t: " + listBk[pos].pengarang);
+            System.out.println("Stock \t\t: " + listBk[pos].stock);
+        }else{System.out.println("Data "+x+" tidak ditemukan");}
     }
 }
