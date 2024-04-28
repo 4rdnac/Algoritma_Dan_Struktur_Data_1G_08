@@ -42,7 +42,7 @@ public class Gudang08 {
             Barang08 delete = tumpukan[top];
             top--;
             System.out.println("Barang " + delete.nama + " diambil dari Gudang");
-            System.out.println("Kode unik dalam biner "+konversiDesimalKeBiner(delete.kode));
+            System.out.println("Kode unik dalam biner " + konversiDesimalKeBiner(delete.kode));
             return delete;
         } else {
             System.out.println("Tumpukan barang kosong.");
@@ -85,5 +85,34 @@ public class Gudang08 {
             biner += stack.pop();
         }
         return biner;
+    }
+
+    public Barang08 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang08 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    public int sequentialSearch(int cari) {
+        for (int i = 0; i < tumpukan.length; i++) {
+            if (tumpukan[i] != null && tumpukan[i].kode == cari) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void cariBarang(int hasil) {
+        if (hasil != -1) {
+            System.out.println(
+                    "Barang dengan kode " + tumpukan[hasil].kode + " ditemukan di gudang pada posisi: " + hasil);
+        } else {
+            System.out.println("Barang tidak ditemukan dalam gudang.");
+        }
     }
 }
