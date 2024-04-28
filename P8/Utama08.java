@@ -42,6 +42,7 @@ public class Utama08 {
                     break;
                 case 5:
                     isRun = false;
+                    sc08.close();
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. silahkan coba lagi.");
