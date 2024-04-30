@@ -9,6 +9,7 @@ public class QueueMain08 {
         System.out.println("2. Antrian keluar");
         System.out.println("3. Cek antrian terdepan");
         System.out.println("4. Cek semua antrian");
+        System.out.println("5. Cek antrian paling belakang");
         System.out.println("---------------------");
     }
 
@@ -45,18 +46,21 @@ public class QueueMain08 {
                             && data.saldo != 0) {
                         System.out.println("Antrian yang dikeluarkan: " + data.norek + " " + data.nama + " "
                                 + data.alamat + " " + data.umur + " " + data.saldo);
+                        break;
                     }
-                    break;
                 case 3:
                     antri.peek();
                     break;
                 case 4:
                     antri.print();
                     break;
+                case 5:
+                    antri.peekRear();
+                    break;
                 default:
                     break;
             }
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4);
+        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5);
         sc08.close();
     }
 }

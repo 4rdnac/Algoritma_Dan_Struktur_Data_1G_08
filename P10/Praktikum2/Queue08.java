@@ -101,4 +101,12 @@ public class Queue08 {
         }
         return dt;
     }
+
+    public void peekRear() {
+        if (!isEmpty()) {
+            System.out.println("Antrian paling belakang: " + data[rear]);
+        } else {
+            System.out.println("Queue masih kosong");
+        }
+    }
 }
