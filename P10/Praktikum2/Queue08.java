@@ -102,4 +102,13 @@ public class Queue08 {
         }
         return dt;
     }
+
+    public void peekRear() {
+        if (!isEmpty()) {
+            System.out.println("Antrian paling belakang: " + data[rear].norek + " " + data[rear].nama + " " + data[rear].alamat + " " + data[rear].umur + " "
+            + data[rear].saldo);
+        } else {
+            System.out.println("Queue masih kosong");
+        }
+    }
 }
