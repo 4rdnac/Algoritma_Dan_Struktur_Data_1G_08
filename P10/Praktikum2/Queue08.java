@@ -32,7 +32,8 @@ public class Queue08 {
 
     public void peek() {
         if (!isEmpty()) {
-            System.out.println("Elemen terdepan: " + data[front]);
+            System.out.println("Elemen terdepan: " + data[front].norek + " " + data[front].nama + " " + data[front].alamat + " " + data[front].umur + " "
+            + data[front].saldo);
         } else {
             System.out.println("Queue masih kosong");
         }
@@ -100,13 +101,5 @@ public class Queue08 {
             }
         }
         return dt;
-    }
-
-    public void peekRear() {
-        if (!isEmpty()) {
-            System.out.println("Antrian paling belakang: " + data[rear]);
-        } else {
-            System.out.println("Queue masih kosong");
-        }
     }
 }
