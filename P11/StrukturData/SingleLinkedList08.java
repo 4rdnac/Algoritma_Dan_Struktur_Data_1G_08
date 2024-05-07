@@ -66,7 +66,7 @@ public class SingleLinkedList08 {
             addFirst(input);
         } else {
             Node08 temp = head;
-            for (int i = 0; i < index; i++) {
+            for (int i = 0; i < index -1; i++) {
                 temp = temp.next;
             }
             temp.next = new Node08(input, temp.next);
