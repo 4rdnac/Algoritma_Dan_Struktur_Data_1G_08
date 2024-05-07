@@ -60,25 +60,18 @@ public class SingleLinkedList08 {
     }
 
     void insertAt(int index, int input) {
-        Node08 ndInput = new Node08();
         if (index < 0) {
-            System.out.println("Perbaiki logikanya! kalau indeksnya -1 bagaimana???");
-            return;
+            System.out.println("Perbaiki logikanya! Kalau indeksnya -1 bagaimana?");
         } else if (index == 0) {
             addFirst(input);
         } else {
             Node08 temp = head;
-            for (int i = 0; i < index - 1; i++) {
-                if (temp == null) {
-                    System.out.println("Indeks melebihi ukuran linked list");
-                    return;
-                }
+            for (int i = 0; i < index; i++) {
                 temp = temp.next;
             }
-            ndInput.next = temp.next;
-            temp.next = ndInput;
-            if (ndInput.next == null) {
-                tail = ndInput;
+            temp.next = new Node08(input, temp.next);
+            if (temp.next.next == null) {
+                tail = temp.next;
             }
         }
     }

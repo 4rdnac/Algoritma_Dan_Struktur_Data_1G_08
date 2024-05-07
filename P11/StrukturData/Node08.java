@@ -10,5 +10,6 @@ public class Node08 {
     }
 
     Node08() {
+        
     }
 }
