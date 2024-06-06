@@ -38,5 +38,6 @@ public class GraphMain08 {
         System.out.println("Hasil setelah penghapusan edge");
         gdg.removeEdge(2, 1);
         gdg.printGraph();
+        gdg.totalDegree(2);
     }
 }
