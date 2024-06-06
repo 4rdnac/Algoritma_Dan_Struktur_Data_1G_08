@@ -1,8 +1,8 @@
 package P15;
 
 public class GraphMain08 {
-    public static void main(String[] args) throws Exception{
-        Graph08 gedung=new Graph08(6);
+    public static void main(String[] args) throws Exception {
+        Graph08 gedung = new Graph08(6);
         gedung.addEdge(0, 1, 50);
         gedung.addEdge(0, 2, 100);
         gedung.addEdge(1, 3, 70);
@@ -13,5 +13,7 @@ public class GraphMain08 {
         gedung.printGraph();
         gedung.removeEdge(1, 3);
         gedung.printGraph();
+        gedung.isConnected();
+        gedung.isConnected();
     }
 }
