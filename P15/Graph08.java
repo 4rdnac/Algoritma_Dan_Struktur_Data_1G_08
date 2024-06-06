@@ -1,7 +1,5 @@
 package P15;
 
-import java.util.Scanner;
-
 public class Graph08 {
     int vertex;
     DoubleLinkedLists08 list[];
@@ -69,13 +67,7 @@ public class Graph08 {
         System.out.println("");
     }
 
-    public void isConnected() {
-        Scanner sc08 = new Scanner(System.in);
-
-        System.out.print("Masukkan gedung asal: ");
-        int asal = sc08.nextInt();
-        System.out.print("Masukkan gedung tujuan: ");
-        int tujuan = sc08.nextInt();
+    public void isConnected(int asal, int tujuan) {
         boolean found = false;
 
         for (int i = 0; i < list[asal].size(); i++) {
@@ -88,7 +80,7 @@ public class Graph08 {
                 System.out.println("Terjadi kesalahan");
             }
         }
-    }}
+
         char asalChar = (char) ('A' + asal);
         char tujuanChar = (char) ('A' + tujuan);
 
