@@ -85,10 +85,10 @@ public class Graph08 {
                     break;
                 }
             } catch (Exception e) {
-                System.out.println("Terjadi kesalahan: " + );
+                System.out.println("Terjadi kesalahan");
             }
         }
-
+    }}
         char asalChar = (char) ('A' + asal);
         char tujuanChar = (char) ('A' + tujuan);
 
